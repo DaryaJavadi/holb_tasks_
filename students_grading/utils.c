@@ -6,7 +6,7 @@ float calculate_average_score(float scores[], int num_students)
 
 	for (i = 0; i < num_students; i++)
 	{
-		sum += scores[]
+		sum += scores[];
 	}
 	return (sum / num_students);
 }
