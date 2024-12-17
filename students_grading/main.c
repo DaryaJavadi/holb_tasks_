@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "utils.c"
 #include "grade_calculator.c"
-
+#define NUM_STUDENTS 3
 struct Student {
 	char name[30];
 	float score;
@@ -26,7 +26,7 @@ int main()
 	}
 
 	float average = calculate_average_score(scores, NUM_STUDENTS);
-	printf("\nAverage score of all students: %.2f\n", average);
+	printf("Average score of all students: %.2f\n", average);
 
 	return (0);
 }
