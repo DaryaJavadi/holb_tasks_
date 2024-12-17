@@ -5,7 +5,7 @@
 struct Student {
 	char name[30];
 	float score;
-}
+};
 
 int main()
 {
