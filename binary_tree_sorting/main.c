@@ -1,4 +1,4 @@
-#include <stduio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "binary_tree.h"
 int main() {
@@ -10,10 +10,10 @@ int main() {
         int arr_size = 0;
         printf("Write the value for Tree (Write -1 to stop): \n");
         while(1){
-                printf("Write the number: ")
+                printf("Write the number: ");
                 scanf("%d" , &value);
                 if (value == -1) break;
-                root = InserdNote(root , value);
+                root = insertNode(root, value);
         }
                 height = calculateHeight(root);
                 printf("Height of the tree: %d\n", height);
@@ -30,7 +30,4 @@ int main() {
         free(arr);
         freeTree(root);
         return 0;
-
-
 }
-~   
