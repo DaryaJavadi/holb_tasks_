@@ -10,10 +10,10 @@ int main() {
         int arr_size = 0;
         printf("Write the value for Tree (Write -1 to stop): \n");
         while(1){
-                printf("Write the number: ")
+                printf("Write the number: ");
                 scanf("%d" , &value);
                 if (value == -1) break;
-                root = InserdNote(root , value);
+                root = InsertNode(root , value);
         }
                 height = calculateHeight(root);
                 printf("Height of the tree: %d\n", height);
