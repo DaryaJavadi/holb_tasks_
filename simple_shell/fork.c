@@ -23,11 +23,11 @@ int main(void)
 
 	if (pid == 0)
 	{
-	printf("(%d) Nooooooooo! I am the child.\n", my_pid);
+	printf("(%d) I am the child.\n", my_pid);
 	}
 	else
 	{
-	printf("(%d) %d, I am your father.\n", my_pid, pid);
+	printf("(%d)  I am your father.\n", my_pid, pid);
 	}
 
 	return 0;
