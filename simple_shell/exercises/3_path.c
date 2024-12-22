@@ -1,17 +1,30 @@
 #include <stdio.h>
 #include <string.h>
 
-char *_getenv(const char *name);
+extern char **environ;
 
-void print_path(void)
+char *_getenv(const char *name)
 {
-	char *path = _getenv("PATH");
-	for (char *dir = strtok(path, ":"); dir; dir = strtok(NULL, ":"))
-	printf("%s\n", dir);
+    for (int i = 0; environ[i]; i++)
+    {
+        if (strncmp(environ[i], name, strlen(name)) == 0 && environ[i][strlen(name)] == '=')
+            return environ[i] + strlen(name) + 1;
+    }
+    return NULL;
 }
 
 int main(void)
 {
-	print_path();
-	return (0);
+    char *path = _getenv("PATH");
+
+    if (path)
+    {
+        char *dir = strtok(path, ":");
+        while (dir)
+        {
+            printf("%s\n", dir);
+            dir = strtok(NULL, ":");
+        }
+    }
+    return 0;
 }
