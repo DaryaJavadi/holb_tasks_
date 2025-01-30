@@ -1,0 +1,1 @@
+>>> multiply_vectors = __import__('multiply_vectors').multiply_vectors
