@@ -1,8 +1,6 @@
 >>> multiply_vectors = __import__('multiply_vectors').multiply_vectors
 
->>> vec1 = [2]
->>> vec2 = ['a']
->>> multiply_vectors(vec1, vec2)
+>>> multiply_vectors(2, 'a')
 Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
